@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dx8-dM-3LU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mf-Om-lR3">
+                                <rect key="frame" x="0.0" y="80" width="414" height="733"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O7-Vc-Rqq">
+                                <rect key="frame" x="136" y="34" width="142" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5b7-6W-9jF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-rE-ZVz">
+                                <rect key="frame" x="20" y="41" width="46" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1ot-X5-j09"/>
+                                </constraints>
+                                <state key="normal" image="information.png"/>
+                                <connections>
+                                    <action selector="btnInformation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMK-UL-Gb8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Salud_virus.png" translatesAutoresizingMaskIntoConstraints="NO" id="1gM-97-Z64">
+                                <rect key="frame" x="92" y="31" width="64" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Mnd-1L-vXZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pF-yH-RhZ">
+                                <rect key="frame" x="314" y="47" width="50" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="73h-pw-Uun"/>
+                                </constraints>
+                                <state key="normal" image="btn_sos.png"/>
+                                <connections>
+                                    <action selector="btnSOS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRD-RN-DzI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0mf-Om-lR3" firstAttribute="top" secondItem="2O7-Vc-Rqq" secondAttribute="bottom" constant="6" id="3k1-Wk-dOw"/>
+                            <constraint firstItem="0mf-Om-lR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3zN-ng-MIv"/>
+                            <constraint firstItem="2O7-Vc-Rqq" firstAttribute="leading" secondItem="1gM-97-Z64" secondAttribute="trailing" constant="-20" id="6LS-Bf-3kZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7pF-yH-RhZ" secondAttribute="trailing" constant="50" id="83j-Rm-WiI"/>
+                            <constraint firstItem="0mf-Om-lR3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fel-We-yDd"/>
+                            <constraint firstItem="0fB-rE-ZVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FfH-Ws-N8X"/>
+                            <constraint firstItem="0fB-rE-ZVz" firstAttribute="centerY" secondItem="1gM-97-Z64" secondAttribute="centerY" constant="4.5" id="ILj-1v-OdQ"/>
+                            <constraint firstItem="2O7-Vc-Rqq" firstAttribute="centerY" secondItem="7pF-yH-RhZ" secondAttribute="centerY" constant="-5.5" id="Wfu-K4-XsT"/>
+                            <constraint firstItem="7pF-yH-RhZ" firstAttribute="leading" secondItem="2O7-Vc-Rqq" secondAttribute="trailing" constant="36" id="aAD-Dm-bJG"/>
+                            <constraint firstItem="0mf-Om-lR3" firstAttribute="top" secondItem="0fB-rE-ZVz" secondAttribute="bottom" constant="5" id="gbt-NJ-Urp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0mf-Om-lR3" secondAttribute="bottom" id="hOq-pH-6y5"/>
+                            <constraint firstItem="0fB-rE-ZVz" firstAttribute="top" secondItem="2O7-Vc-Rqq" secondAttribute="top" constant="7" id="jdv-by-iLP"/>
+                            <constraint firstItem="0fB-rE-ZVz" firstAttribute="bottom" secondItem="1gM-97-Z64" secondAttribute="bottom" constant="-1" id="oN4-FL-N7r"/>
+                            <constraint firstItem="1gM-97-Z64" firstAttribute="leading" secondItem="0fB-rE-ZVz" secondAttribute="trailing" constant="26" id="rr8-ST-Eq2"/>
+                            <constraint firstItem="0fB-rE-ZVz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-3" id="zFk-Jm-8rq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="Salud_virus.png" id="Vuv-SP-oI5"/>
+                    <connections>
+                        <outlet property="Localizacion" destination="0mf-Om-lR3" id="4Ci-PB-ltz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.79710144927537" y="348.88392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nVE-W2-aw8">
+            <objects>
+                <viewController id="Rty-pB-BZy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAF-zP-2UM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fhK-Ns-sKh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlY-t1-Q4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-28"/>
+        </scene>
+        <!--INFORMATION COVID-19-->
+        <scene sceneID="LHE-TN-5XL">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="TED-ur-Db8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="C3T-gn-GDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="labelColor"/>
+                        <sections>
+                            <tableViewSection id="qJj-dq-a4g">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3GM-Ty-wpH">
+                                        <rect key="frame" x="0.0" y="18" width="414" height="1.1920928955078125e-07"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3GM-Ty-wpH" id="hZd-fK-ApB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.1920928955078125e-07"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="TED-ur-Db8" id="3nA-XQ-YPS"/>
+                            <outlet property="delegate" destination="TED-ur-Db8" id="3k7-vx-aDh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="INFORMATION COVID-19" id="PBm-n8-T8q"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqz-ai-2B0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2065.217391304348" y="-634.15178571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZIH-se-uyx">
+            <objects>
+                <navigationController id="QPh-De-Rlx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ewh-eD-DNa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TED-ur-Db8" kind="relationship" relationship="rootViewController" id="IBz-tl-IDy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGJ-lk-7Em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-634"/>
+        </scene>
+        <!--Information Covid-19-->
+        <scene sceneID="k4g-Gt-upw">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="7FR-0b-uVL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Information Covid-19" id="ItW-rr-fDt"/>
+                    <connections>
+                        <segue destination="QPh-De-Rlx" kind="relationship" relationship="masterViewController" id="52J-JV-hBO"/>
+                        <segue destination="Rty-pB-BZy" kind="relationship" relationship="detailViewController" id="SYK-3M-CzK"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMN-7H-uHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="-331"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SIR-4F-xTn">
+            <objects>
+                <tabBarController id="Dx8-dM-3LU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dQO-XN-m5b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="hjk-B6-jNQ"/>
+                        <segue destination="7FR-0b-uVL" kind="relationship" relationship="viewControllers" id="71I-BI-y5l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0G-1g-Hf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Salud_virus.png" width="50" height="45"/>
+        <image name="btn_sos.png" width="25" height="25"/>
+        <image name="information.png" width="25" height="25"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
